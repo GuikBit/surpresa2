@@ -1,0 +1,102 @@
+/* Importação de fonte opcional para títulos (ex: Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+
+.DosisPageTitle {
+  font-family: 'Dosis', sans-serif;
+}
+
+/* Define a perspectiva para a cena 3D do livro */
+.perspective {
+  perspective: 1500px; /* Ajuste para mais ou menos profundidade 3D */
+}
+
+/* Garante que as transformações 3D dos filhos sejam preservadas */
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Define a origem da transformação para a esquerda (como a lombada de um livro) */
+.transform-origin-left {
+  transform-origin: left center;
+}
+
+/* Estilo base para cada página e capa */
+.page {
+  backface-visibility: visible; /* Oculta o verso do elemento ao ser virado */
+  -webkit-backface-visibility: visible; /* Para compatibilidade com Safari/Chrome */
+  box-sizing: border-box;
+  
+}
+
+/* Conteúdo interno da página */
+.page-content-inner {
+  /* Adicione aqui estilos se precisar que o conteúdo interno tenha comportamento 3D específico,
+     mas geralmente é melhor manter o conteúdo "plano" dentro da página que rotaciona. */
+  -webkit-font-smoothing: antialiased; /* Melhora a renderização do texto */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-content-inner h2,
+.page-content-inner p {
+  color: #333; /* Cor de texto padrão para melhor legibilidade sobre textura de papel */
+}
+.page-content-inner p {
+    color: #4a4a4a;
+}
+
+
+/* Envelope decorativo - imagem de fundo */
+.envelope-decoration {
+    /* Estilos já aplicados via classes Tailwind e inline style */
+    /* Apenas um placeholder se precisar de CSS específico aqui */
+}
+
+
+/* Responsividade para o container da cena do livro */
+/* As classes Tailwind w-[] h-[] já cuidam da responsividade base.
+   Este media query é mais para ajustes finos se necessário. */
+@media (max-width: 640px) { /* sm breakpoint de Tailwind */
+  .book-scene {
+    /* Exemplo: Se precisar reduzir ainda mais em telas muito pequenas */
+    /* width: 260px; */
+    /* height: 364px; */
+  }
+  .page-content-inner {
+    padding: 0.75rem; /* 12px */
+  }
+  .page-content-inner h2 {
+    font-size: 0.95rem; /* Ajuste o tamanho da fonte para telas menores */
+    margin-bottom: 0.25rem;
+  }
+  .page-content-inner p {
+    font-size: 0.7rem; /* Ajuste o tamanho da fonte para telas menores */
+    line-height: 1.5;
+  }
+  .page-content-inner img {
+    max-height: 7rem; /* 112px */
+  }
+  .book-scene-wrapper {
+    padding: 0.5rem;
+    min-height: 420px; /* Ajuste a altura mínima do wrapper */
+  }
+}
+
+/* Keyframes para animações mais complexas (não usados ativamente neste exemplo,
+   pois as transições CSS são suficientes, mas mantidos para referência) */
+@keyframes turnPageAnimation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes closePageAnimation {
+  from {
+    transform: rotateY(-180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
