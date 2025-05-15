@@ -60,7 +60,7 @@ const PolaroidSlideshow: React.FC<PolaroidSlideshowProps> = ({
   ], [])
 
   const [focusedIndex, setFocusedIndex] = useState(0)
-  const [isAutoplay, setIsAutoplay] = useState(true)
+  const [isAutoplay] = useState(true)
   const [isPaused, setIsPaused] = useState(false)
   const autoplayTimerRef = useRef<NodeJS.Timeout | null>(null)
 

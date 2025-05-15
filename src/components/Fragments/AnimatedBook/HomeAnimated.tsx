@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 // Ajuste o caminho se AnimatedBook e suas types estiverem em locais diferentes ou se você usar um types.ts separado
 import AnimatedBook, { PageData } from './AnimatedBook'; // Se PageData for exportada de AnimatedBook.tsx
 // import AnimatedBook from './AnimatedBook';

@@ -1,12 +1,12 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 
 const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
   // const canvasRef = useRef<HTMLCanvasElement | null>(null)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
+  // const audioRef = useRef<HTMLAudioElement | null>(null)
   const [showMessage, setShowMessage] = useState(false)
   const [currentMessage, setCurrentMessage] = useState(0)
 
