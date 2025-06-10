@@ -140,12 +140,12 @@ const PolaroidSlideshow: React.FC<PolaroidSlideshowProps> = ({
 
   return (
     <motion.div
-      className="section polaroid-slideshow relativ"
+      className="section polaroid-slideshow relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className=" w-full h-screen  flex flex-col items-center justify-center overflow-hidden">
+      <div className=" w-full h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="polaroid-container relative w-full h-[70vh] perspective-100">
           {/* Renderizar todas as fotos */}
           {photos.map((photo, index) => {

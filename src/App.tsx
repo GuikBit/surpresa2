@@ -9,6 +9,8 @@ import HeartRateAnimation from './components/Fragments/HeartLineAnimation'
 import QuizHome from './components/Fragments/QuizSection/QuizHome'
 import HomeFinalSection from './components/Fragments/FinalSection/HomeFinalSection'
 import FloatingHearts from './components/Fragments/Floating-hearts'
+import ContadorNamoro from './components/Fragments/Contator/ContadorNamoro'
+import LoveCounter from './components/Fragments/Contator/ContadorNamoro'
 
 export interface Action {
   isBack: boolean;
@@ -58,6 +60,8 @@ function App() {
       <FloatingHearts density={5} colorVariety="mixed" />
 
       <AnimatePresence mode="wait">
+
+        {currentSection === 4 && <LoveCounter startDate="2022-10-08 12:00:00" partnerName="minha princesa" /> }
 
         {currentSection === 0 && <PolaroidSlideshow key="photos" action={action} setAction={setAction}  autoplaySpeed={6000} setNext={setNext} /> }
 

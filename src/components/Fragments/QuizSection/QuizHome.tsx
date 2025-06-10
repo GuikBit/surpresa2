@@ -3,7 +3,7 @@
 import { useState } from "react"
 import QuizSection from "./QuizSection"
 
-export default function QuizHome({onComplete}:{setNext:(imte: boolean)=>void, onComplete: ()=> void}) {
+export default function QuizHome({ onComplete }: { onComplete: () => void }) {
   const [currentSection, setCurrentSection] = useState("welcome")
 
   const handleStartQuiz = () => {
