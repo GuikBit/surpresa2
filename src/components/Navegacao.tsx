@@ -33,14 +33,13 @@ const Navegacao: React.FC<NavigacaoProps> = ({ action, next, onComplete, current
       <div className="flex items-center justify-between max-w-4xl mx-auto">
         {/* Botão Voltar */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, x: 0 }}
           animate={{
-            opacity: isFirstSection ? 0 : 1,
-            x: isFirstSection ? -20 : 0,
+            opacity: isFirstSection ? 0 : 1
           }}
           transition={{ duration: 0.3 }}
         >
-          {!isFirstSection && (
+          {/* {!isFirstSection && ( */}
             <motion.button
               className="flex items-center gap-2 bg-transparent border-2 border-[#C21807] text-[#C21807] px-4 py-2 md:px-6 md:py-3 rounded-full font-medium shadow-lg backdrop-blur-sm hover:border-none hover:bg-gradient-to-r hover:from-[#C21807] hover:to-[#FF637E] hover:text-white transition-colors duration-300"
               onClick={handleBackClick}
@@ -51,7 +50,7 @@ const Navegacao: React.FC<NavigacaoProps> = ({ action, next, onComplete, current
               <ChevronLeft size={20} />
               <span className="hidden md:inline">Voltar</span>
             </motion.button>
-          )}
+          {/* )} */}
         </motion.div>
 
         {/* Indicador de progresso */}

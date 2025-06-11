@@ -11,7 +11,6 @@ export default function HomeFinalSection({homeSection, setNext}) {
         <FinalSection
           onBack={homeSection}
           setNext={setNext}
-          partnerName="Amor"
         />
       
     </main>

@@ -278,9 +278,9 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
         ))}
       </div>
 
-      <div className="w-full min-h-screen flex flex-col items-center justify-center p-4 relative z-10">
+      <div className="w-full min-h-screen flex flex-col items-center justify-center relative ">
         <motion.div
-          className="max-w-7xl mx-auto p-8 md:p-12 bg-white/85 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/30"
+          className=" mx-auto p-8 md:py-12  "
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -299,9 +299,20 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
               >
                 <Heart className="w-12 h-12 text-red-500 drop-shadow-lg" />
               </motion.div>
-              <h1 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-pink-600 via-red-500 to-purple-600 bg-clip-text text-transparent drop-shadow-sm">
+              {/* <h1 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-pink-600 via-red-500 to-purple-600 bg-clip-text text-transparent drop-shadow-sm">
                 Nosso Amor em Números
-              </h1>
+              </h1> */}
+              <motion.p
+                className="text-gray-800 text-xl md:text-2xl font-bold mx-20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
+                Desde{" "}
+                <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+                  {formatDate(startDate)}
+                </span>
+              </motion.p>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
@@ -309,7 +320,7 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
                 <Heart className="w-12 h-12 text-red-500 drop-shadow-lg" />
               </motion.div>
             </div>
-            <motion.p
+            {/* <motion.p
               className="text-gray-800 text-xl md:text-2xl font-bold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -319,12 +330,14 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
               <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
                 {formatDate(startDate)}
               </span>
-            </motion.p>
+            </motion.p> */}
+
+
           </motion.div>
 
           {/* Contador Principal */}
           <motion.div
-            className="flex flex-wrap justify-center items-center gap-6 md:gap-12 mb-16"
+            className="flex flex-wrap justify-center items-center gap-3 md:gap-6 mb-16"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0 }}
@@ -338,7 +351,7 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
               >
-                <div className="text-6xl md:text-8xl font-black bg-gradient-to-r from-red-500 via-pink-600 to-red-400 bg-clip-text text-transparent mb-2 drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300">
+                <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-red-500 via-pink-600 to-red-400 bg-clip-text text-transparent mb-2 drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300">
                   <CountUp
                     from={unit.label === "Segundos" ? unit.value : 0}
                     to={unit.value}
@@ -354,28 +367,23 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
             ))}
           </motion.div>
 
-          {/* Separadores decorativos */}
-          {/* <motion.div
-            className="flex justify-center items-center gap-4 mb-12"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
+           <motion.div
+            className="flex flex-wrap justify-center items-center gap-3 md:gap-6 mb-16"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0 }}
           >
-            {[...Array(7)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="w-3 h-3 bg-gradient-to-r from-pink-400 to-red-400 rounded-full shadow-lg"
-                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
-                transition={{
-                  duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: i * 0.2,
-                }}
-              />
-            ))}
-          </motion.div> */}
+            <motion.p
+              className="text-gray-800 text-xl md:text-xl font-semibold mx-20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              Estatisticas do nosso relacionamento
+            </motion.p>
 
-          {/* Estatísticas Românticas */}
+          </motion.div>
+
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
             initial={{ opacity: 0 }}
@@ -411,28 +419,6 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Mensagem Final */}
-          {/* <motion.div
-            className="mt-12 text-center bg-gradient-to-r from-white/90 to-pink-50/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-pink-100/50"
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 2.0, duration: 0.8 }}
-          >
-            <motion.div
-              className="flex items-center justify-center gap-2 mb-4"
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-            >
-              <Heart className="w-6 h-6 text-red-500" />
-              <Sparkles className="w-6 h-6 text-pink-500" />
-              <Heart className="w-6 h-6 text-red-500" />
-            </motion.div>
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium">
-              Cada número conta uma história de amor. Que venham muitos mais momentos especiais juntos!
-              <span className="text-2xl ml-2">💕✨</span>
-            </p>
-          </motion.div> */}
         </motion.div>
       </div>
     </motion.div>

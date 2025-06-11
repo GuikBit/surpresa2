@@ -1,16 +1,16 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import LoveCounter from "../Contator/ContadorNamoro"
 
 
-const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
+const FinalSection = ({ onBack, setNext }) => {
   // const canvasRef = useRef<HTMLCanvasElement | null>(null)
   // const audioRef = useRef<HTMLAudioElement | null>(null)
   const [showMessage, setShowMessage] = useState(false)
   const [currentMessage, setCurrentMessage] = useState(0)
-
+  console.log(currentMessage)
   const messages = [
     "Você é o amor da minha vida. Obrigado por todos os momentos maravilhosos que compartilhamos juntos.",
     "Cada dia ao seu lado é uma nova aventura cheia de amor e felicidade.",
@@ -113,13 +113,13 @@ const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
           </motion.div>
 
           {/* Mensagem */}
-          <motion.div
+          {/* <motion.div
             className="relative bg-white rounded-2xl p-6 shadow-inner mb-8 min-h-[120px] flex items-center justify-center"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-          >
-            <AnimatePresence mode="wait">
+          > */}
+            {/* <AnimatePresence mode="wait">
               {showMessage && (
                 <motion.p
                   key={currentMessage}
@@ -134,10 +134,10 @@ const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
                   {messages[currentMessage]}
                 </motion.p>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
 
             {/* Indicadores de mensagem */}
-            <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1 mt-5">
+            {/* <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1 mt-5">
               {messages.map((_, index) => (
                 <motion.div
                   key={index}
@@ -149,11 +149,11 @@ const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
                   transition={{ duration: 0.3 }}
                 />
               ))}
-            </div>
-          </motion.div>
+            </div> */}
+          {/* </motion.div> */}
 
           <motion.div
-            className="relative bg-white rounded-2xl p-6 shadow-inner mb-8 min-h-[120px] flex items-center justify-center"
+            className="relative bg-white rounded-2xl shadow-inner mb-8 min-h-[120px] flex items-center justify-center"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.2 }}
@@ -171,7 +171,7 @@ const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
             >
               Voltar ao Início
             </motion.button>
-
+{/* 
             <motion.a
               href="#"
               className="px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full font-medium shadow-md hover:shadow-lg text-center"
@@ -179,7 +179,7 @@ const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
               whileTap={{ scale: 0.95 }}
             >
               Nosso Presente Especial
-            </motion.a>
+            </motion.a> */}
           </div>
         </motion.div>
       </div>

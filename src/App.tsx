@@ -10,7 +10,6 @@ import HomeAnimated from "./components/Fragments/AnimatedBook/HomeAnimated"
 import QuizHome from "./components/Fragments/QuizSection/QuizHome"
 import HomeFinalSection from "./components/Fragments/FinalSection/HomeFinalSection"
 import FloatingHearts from "./components/Fragments/Floating-hearts"
-import LoveCounter from "./components/Fragments/Contator/ContadorNamoro"
 
 export interface Action {
   isBack: boolean
@@ -83,8 +82,7 @@ function App() {
 
         {currentSection === 3 && <HomeFinalSection key="final" homeSection={homeSection} setNext={setNext} />}
 
-        {/* {currentSection === 4 && <LoveCounter startDate="2022-10-08 12:00:00" partnerName="minha princesa" />} */}
-
+  
       </AnimatePresence>
 
       <Navegacao

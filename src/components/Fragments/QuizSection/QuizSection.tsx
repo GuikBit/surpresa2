@@ -233,7 +233,7 @@ const QuizSection = ({ onComplete, onBack }) => {
             Quiz do Amor
             <Heart className="text-red-500 fill-red-500" />
           </h2>
-          <p className="text-red-600 mt-2">Descubra o quanto vocês se conhecem!</p>
+          {/* <p className="text-red-600 mt-2">Descubra o quanto vocês se conhecem!</p> */}
         </div>
 
         <AnimatePresence mode="wait">
