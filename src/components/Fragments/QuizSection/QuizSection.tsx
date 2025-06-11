@@ -158,7 +158,7 @@ const QuizSection = ({ onComplete, onBack }) => {
     setSelectedAnswer(index)
     setTimerActive(false)
 
-    if (index === questions[currentQuestion].correctAnswer) {
+    if (index + 1 === questions[currentQuestion].correctAnswer) {
       setScore(score + 1)
       // Pequena explosão de confetti para respostas corretas
       confetti({
@@ -281,7 +281,7 @@ const QuizSection = ({ onComplete, onBack }) => {
                       variant="outline"
                       className={`w-full p-4 text-left justify-start h-auto border-2 ${
                         selectedAnswer === index
-                          ? index === questions[currentQuestion].correctAnswer
+                          ? index + 1 === questions[currentQuestion].correctAnswer
                             ? "border-green-500 bg-green-50 text-green-700"
                             : "border-red-500 bg-red-50 text-red-700"
                           : "border-red-200 hover:border-red-400 text-neutral-800 hover:bg-red-50"
