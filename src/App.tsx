@@ -83,7 +83,7 @@ function App() {
 
         {currentSection === 3 && <HomeFinalSection key="final" homeSection={homeSection} setNext={setNext} />}
 
-        {currentSection === 4 && <LoveCounter startDate="2022-10-08 12:00:00" partnerName="minha princesa" />}
+        {/* {currentSection === 4 && <LoveCounter startDate="2022-10-08 12:00:00" partnerName="minha princesa" />} */}
 
       </AnimatePresence>
 

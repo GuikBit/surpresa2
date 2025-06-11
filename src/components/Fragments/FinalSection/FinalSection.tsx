@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import LoveCounter from "../Contator/ContadorNamoro"
 
 
 const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
@@ -149,6 +150,15 @@ const FinalSection = ({ onBack, partnerName = "amor", setNext }) => {
                 />
               ))}
             </div>
+          </motion.div>
+
+          <motion.div
+            className="relative bg-white rounded-2xl p-6 shadow-inner mb-8 min-h-[120px] flex items-center justify-center"
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
+            <LoveCounter startDate="2022-10-08 12:00:00" partnerName="minha princesa" />
           </motion.div>
 
           {/* Botões */}

@@ -17,74 +17,119 @@ const QuizSection = ({ onComplete, onBack }) => {
   const [timerActive, setTimerActive] = useState(true)
 
   // Perguntas mais interessantes e românticas
-  const questions = [
-    {
-      question: "Qual foi o momento em que você percebeu que estava apaixonado(a)?",
-      options: [
-        "Quando nos beijamos pela primeira vez",
-        "Quando você me fez rir em um momento difícil",
-        "Quando apresentei você para minha família",
-        "Quando viajamos juntos pela primeira vez",
-      ],
-      correctAnswer: 1,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      question: "Se pudéssemos ter um encontro dos sonhos, onde seria?",
-      options: [
-        "Paris, a cidade do amor",
-        "Uma praia deserta ao pôr do sol",
-        "Um chalé na montanha com neve",
-        "Um jantar à luz de velas em casa",
-      ],
-      correctAnswer: 3,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      question: "Qual música mais te lembra de nós?",
-      options: [
-        "Uma música que dançamos juntos",
-        "Aquela que tocava em nosso primeiro encontro",
-        "A música que dedicamos um ao outro",
-        "Uma que sempre cantamos juntos no carro",
-      ],
-      correctAnswer: 2,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      question: "O que você mais ama em mim?",
-      options: [
-        "Seu sorriso e olhar",
-        "Sua inteligência e criatividade",
-        "Seu carinho e atenção comigo",
-        "Seu senso de humor",
-      ],
-      correctAnswer: 2,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      question: "Qual seria nosso final de semana perfeito juntos?",
-      options: [
-        "Maratonar séries e pedir comida",
-        "Fazer uma viagem surpresa",
-        "Passar o dia no parque e jantar fora",
-        "Cozinhar juntos e jogar jogos de tabuleiro",
-      ],
-      correctAnswer: 3,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      question: "Qual é o nosso maior sonho como casal?",
-      options: [
-        "Viajar pelo mundo juntos",
-        "Construir uma família",
-        "Ter nossa própria casa",
-        "Envelhecer juntos com saúde e amor",
-      ],
-      correctAnswer: 0,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-  ]
+ const questions = [
+  {
+    question: "Qual foi o primeiro filme que assistimos juntos?",
+    options: [
+      "O amor esquecido",
+      "Depois do universo",
+      "Por lugares incríveis",
+      "Frangoelho",
+    ],
+    correctAnswer: 4,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Em que dia começamos a namorar?",
+    options: [
+      "Dia 03 de setembro de 2022",
+      "Dia 08 de outubro de 2022",
+      "Dia 28 de agosto de 2022",
+      "Dia 05 de setembro de 2022",
+    ],
+    correctAnswer: 2,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Quem demorou mais para dar o primeiro beijo?",
+    options: [
+      "Ele",
+      "Ela",
+      "Os dois, era complicado",
+      "Não demorou, foi no momento certo",
+    ],
+    correctAnswer: 4,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Qual música mais te lembra de nós?",
+    options: [
+      "De 0 a 10, Melin",
+      "Fica, Anavitória",
+      "Outra vida, Armandinho",
+      "Todas as músicas me lembram você. Escolher apenas uma seria limitar o quanto você inspira cada verso, cada melodia. Seria como tentar resumir o amor por você em uma única nota.",
+    ],
+    correctAnswer: 4,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Qual é a minha cor favorita?(Dele)",
+    options: [
+      "Amarelo",
+      "Vermelho",
+      "Azul",
+      "Verde",
+    ],
+    correctAnswer: 2,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Qual é a minha comida favorita?",
+    options: [
+      "Arroz, feijão, batata morrena, carne de palena e batata frita",
+      "A morena",
+      "Arroz, feijão, lasanha, salada e batata frita",
+      "Todas as opções acima",
+    ],
+    correctAnswer: 4,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Quem manda mais memes durante o dia?",
+    options: [
+      "Ele",
+      "Ela",
+      "Os dois",
+      "Não enviamos memes",
+    ],
+    correctAnswer: 2,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Quem ronca mais?",
+    options: [
+      "Ela",
+      "Ela",
+      "Ela",
+      "Todas as opções acima",
+    ],
+    correctAnswer: 4,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "O que eu, Guilherme, mais amo em você?",
+    options: [
+      "Os seus olhos",
+      "O seu sorriso, com as suas covinhas lindas",
+      "A forma como você lida com a vida — seu discernimento, seu jeito único de me amar, o carinho que me dá todos os dias. É tudo isso junto, não dava pra separar, né?",
+      "Seus peitos lindos (sendo sincero também 😂)",
+    ],
+    correctAnswer: 3,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+  {
+    question: "Qual é o nosso sonho juntos?",
+    options: [
+      "Construir o nosso lar, a nossa família",
+      "Viajar o mundo, conhecer muitos outros lugares",
+      "Envelhecer ao seu lado, compartilhando cada fase da vida",
+      "Todas as opções acima, eu quero viver tudo com você!",
+    ],
+    correctAnswer: 4,
+    image: "/placeholder.svg?height=200&width=300",
+  },
+];
+
 
   useEffect(() => {
     let timer
@@ -109,7 +154,7 @@ const QuizSection = ({ onComplete, onBack }) => {
     }
   }
 
-  const handleAnswer = (index) => {
+  const handleAnswer = (index: any) => {
     setSelectedAnswer(index)
     setTimerActive(false)
 
@@ -145,41 +190,32 @@ const QuizSection = ({ onComplete, onBack }) => {
   }
 
   const getResultMessage = () => {
-    const percentage = (score / questions.length) * 100
-
-    if (percentage === 100) {
-      return {
-        title: "Amor Perfeito! ❤️",
-        message: "Vocês são almas gêmeas! Seu amor é tão sincronizado que parecem ler a mente um do outro!",
-        emoji: "💞",
-      }
-    } else if (percentage >= 80) {
-      return {
-        title: "Amor Profundo! 💖",
-        message: "Vocês se conhecem muito bem! Seu relacionamento é forte e cheio de compreensão mútua!",
-        emoji: "💑",
-      }
-    } else if (percentage >= 60) {
-      return {
-        title: "Amor Crescente! 💕",
-        message: "Vocês estão no caminho certo! Continuem descobrindo mais um sobre o outro a cada dia!",
-        emoji: "🥰",
-      }
-    } else if (percentage >= 40) {
-      return {
-        title: "Amor em Desenvolvimento! 💓",
-        message: "Ainda há muito a descobrir um sobre o outro! Que tal um encontro especial para conversar mais?",
-        emoji: "😊",
-      }
-    } else {
-      return {
-        title: "Início de Jornada! 💘",
-        message:
-          "Vocês estão apenas começando a se conhecer! Aproveitem cada momento para descobrir mais um sobre o outro!",
-        emoji: "🌱",
-      }
-    }
+  if (score <= 4) {
+    return {
+      title: "Hmm... precisamos conversar 😂",
+      message: "Talvez tenha sido só um chute atrás do outro… Mas tudo bem, temos tempo pra aprender mais um sobre o outro! 💬",
+      emoji: "🤔",
+    };
+  } else if (score <= 5) {
+    return {
+      title: "Estamos quase lá, hein!",
+      message: "Você já sabe bastante coisa, mas ainda tem umas coisinhas que dá pra melhorar 😅 Vamos continuar nos descobrindo!",
+      emoji: "😉",
+    };
+  } else if (score <= 8) {
+    return {
+      title: "Uau, você me conhece muito bem!",
+      message: "Você acertou quase tudo! Isso só prova o quanto a gente se conecta. ❤️",
+      emoji: "😍",
+    };
+  } else {
+    return {
+      title: "Perfeito! Você é a minha alma gêmea 💘",
+      message: "Nosso amor é único e completo, não existe pessoa melhor no mundo para dividir a vida! 💞",
+      emoji: "💘",
+    };
   }
+};
 
   const resultInfo = getResultMessage()
 
