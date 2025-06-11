@@ -1,14 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import QuizSection from "./QuizSection"
 
-export default function QuizHome({ onComplete }: { onComplete: () => void }) {
+export default function QuizHome({ setNext, onComplete }: {setNext:(item: boolean)=>void, onComplete: () => void }) {
   const [currentSection, setCurrentSection] = useState("welcome")
 
   const handleStartQuiz = () => {
     setCurrentSection("quiz")
   }
+
+  useEffect(()=>{
+    setNext(true)
+  },[setNext])
 
   // const handleQuizComplete = () => {
   //   setCurrentSection("final")
@@ -18,6 +22,10 @@ export default function QuizHome({ onComplete }: { onComplete: () => void }) {
     setCurrentSection("welcome")
   }
 
+  // const proximo = () =>{
+  //   setNext(true)
+  // }
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-4">
       {currentSection === "welcome" && (
@@ -26,7 +34,7 @@ export default function QuizHome({ onComplete }: { onComplete: () => void }) {
           <p className="mb-6 text-gray-700">Descubra o quanto vocês se conhecem neste quiz especial!</p>
           <button
             onClick={handleStartQuiz}
-            className="px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full font-medium hover:from-pink-600 hover:to-red-600 transition-all shadow-md"
+            className="px-6 py-3 bg-gradient-to-r from-[#C21807] to-[#FF637E] text-white rounded-full font-medium hover:scale-105 transition-all shadow-md"
           >
             Começar Quiz
           </button>

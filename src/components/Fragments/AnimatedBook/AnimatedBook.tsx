@@ -5,8 +5,9 @@ import { MousePointerClick } from 'lucide-react';
 // Interfaces (mantenha como antes ou importe de um arquivo types.ts)
 export interface PageData {
   title: string;
-  content: string;
+  content: any[];
   image?: string;
+  ultimo?: boolean;
 }
 
 export interface AnimatedBookProps {
@@ -109,11 +110,11 @@ const AnimatedBook: FC<AnimatedBookProps> = ({
           <img
             src={envelopeImage}
             alt="Decoração de envelope"
-            className="envelope-decoration  absolute z-0 w-full h-full max-w-[100vw] max-h-[100vh] sm:max-w-[500px] sm:max-h-[550px] md:max-w-[600px] md:max-h-[650px] object-contain pointer-events-none"
+            className="envelope-decoration  absolute z-0 w-full h-full object-contain pointer-events-none"
           />
         )}
       <div
-        className="book-scene relative w-[270px] h-[390px] sm:w-[300px] sm:h-[420px] md:w-[370px] md:h-[530px] perspective"
+        className="book-scene relative w-[320px] h-[490px] md:w-[430px] md:h-[630px] perspective "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -170,18 +171,22 @@ const AnimatedBook: FC<AnimatedBookProps> = ({
               >
                 <div className="page-content-inner absolute inset-0 p-3 sm:p-4 md:p-5 overflow-y-auto">
                   <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 text-gray-800 DosisPageTitle">{page.title}</h2>
-                  <p className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-3 leading-relaxed">{page.content}</p>
+                  {page.content.map((text: any, idx: number) => (
+                    <p key={idx} className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-3 leading-relaxed">{text}</p>
+                  ))}
+                  
+                  
                   {page.image && (
                     <img
                         src={page.image}
                         alt={page.title || 'Ilustração da página'}
-                        className="w-full h-auto max-h-24 sm:max-h-32 md:max-h-40 object-contain rounded my-1 sm:my-2 shadow-sm"
+                        className="w-full h-auto max-h-24 sm:max-h-32 md:max-h-40 object-contain my-1 sm:my-2 "
                     />
                   )}
                 </div>
                 <div className='relative '>
-                  <div className='absolute -bottom-95 md:-bottom-130 gap-2 right-1 md:right-3 flex items-center justify-center text-black group-hover:text-neutral-500'>
-                    <div className='flex justify-center items-center gap-3 mr-10 md:mr-15'>
+                  <div className='absolute -bottom-120 md:-bottom-155 gap-2 right-1 md:right-3 flex items-center justify-center text-black group-hover:text-neutral-500'>
+                    <div className='flex justify-center items-center gap-3 mr-15 md:mr-25'>
                       <span className='text-xs'>Click para continuar</span>
                       <MousePointerClick size={20} className="" />
                     </div>                    
