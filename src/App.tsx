@@ -22,7 +22,7 @@ export interface Action {
 }
 
 function App() {
-  const [currentSection, setCurrentSection] = useState(2)
+  const [currentSection, setCurrentSection] = useState(0)
   const [next, setNext] = useState(false)
   const totalSections = 4 // Ajuste conforme o número total de seções
 
