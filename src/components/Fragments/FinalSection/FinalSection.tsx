@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import LoveCounter from "../Contator/ContadorNamoro"
-
+import foto21 from './../../../assets/foto21.jpg'
+import foto20 from './../../../assets/foto20.jpg'
+import foto18 from './../../../assets/foto18.jpg'
 
 const FinalSection = ({ onBack, setNext }) => {
   // const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -88,27 +90,27 @@ const FinalSection = ({ onBack, setNext }) => {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <motion.div
-              className="relative h-60 rounded-xl overflow-hidden shadow-lg transform rotate-[-3deg]"
+              className="relative h-85 rounded-xl overflow-hidden shadow-lg transform rotate-[-3deg]"
               whileHover={{ scale: 1.05, rotate: 0 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src="/placeholder.svg?height=300&width=300" alt="Foto do casal" className="object-cover" />
+              <img src={foto18} alt="Foto do casal" className="object-cover" />
             </motion.div>
 
             <motion.div
-              className="relative h-60 rounded-xl overflow-hidden shadow-lg transform translate-y-4"
+              className="relative h-auto rounded-xl overflow-hidden shadow-lg transform translate-y-4"
               whileHover={{ scale: 1.05, translateY: 0 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src="/placeholder.svg?height=300&width=300" alt="Foto do casal" className="object-cover" />
+              <img src={foto21} alt="Foto do casal" className="object-cover" />
             </motion.div>
 
             <motion.div
-              className="relative h-60 rounded-xl overflow-hidden shadow-lg transform rotate-[3deg]"
+              className="relative h-auto rounded-xl overflow-hidden shadow-lg transform rotate-[3deg]"
               whileHover={{ scale: 1.05, rotate: 0 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src="/placeholder.svg?height=300&width=300" alt="Foto do casal" className="object-cover" />
+              <img src={foto20} alt="Foto do casal" className="object-cover " />
             </motion.div>
           </motion.div>
 

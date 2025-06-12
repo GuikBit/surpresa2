@@ -180,7 +180,8 @@ const AnimatedBook: FC<AnimatedBookProps> = ({
                     <img
                         src={page.image}
                         alt={page.title || 'Ilustração da página'}
-                        className="w-full h-auto max-h-24 sm:max-h-32 md:max-h-40 object-contain my-1 sm:my-2 "
+                        
+                        className={page.ultimo ?"w-full h-auto max-h-24 sm:max-h-32 md:max-h-55 object-contain my-1 sm:my-2":"w-full h-auto max-h-24 sm:max-h-32 md:max-h-40 object-contain my-1 sm:my-2 "}
                     />
                   )}
                 </div>

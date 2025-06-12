@@ -10,6 +10,7 @@ import HomeAnimated from "./components/Fragments/AnimatedBook/HomeAnimated"
 import QuizHome from "./components/Fragments/QuizSection/QuizHome"
 import HomeFinalSection from "./components/Fragments/FinalSection/HomeFinalSection"
 import FloatingHearts from "./components/Fragments/Floating-hearts"
+// import HeartRateAnimation from "./components/Fragments/HeartLineAnimation"
 
 export interface Action {
   isBack: boolean
@@ -21,9 +22,9 @@ export interface Action {
 }
 
 function App() {
-  const [currentSection, setCurrentSection] = useState(0)
+  const [currentSection, setCurrentSection] = useState(2)
   const [next, setNext] = useState(false)
-  const totalSections = 5 // Ajuste conforme o número total de seções
+  const totalSections = 4 // Ajuste conforme o número total de seções
 
   const nextSection = () => {
     if (currentSection < totalSections - 1) {
@@ -74,7 +75,7 @@ function App() {
 
       <AnimatePresence mode="wait">        
 
-        {currentSection === 0 && <PolaroidSlideshow key="photos" action={action} setAction={setAction} autoplaySpeed={6000} setNext={setNext} />}
+        {currentSection === 0 && <PolaroidSlideshow key="photos" action={action} setAction={setAction} autoplaySpeed={3000} setNext={setNext} />}
 
         {currentSection === 1 && <HomeAnimated setNext={setNext} onComplete={nextSection} />}
 

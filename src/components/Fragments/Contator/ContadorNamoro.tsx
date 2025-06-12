@@ -280,7 +280,7 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
 
       <div className="w-full min-h-screen flex flex-col items-center justify-center relative ">
         <motion.div
-          className=" mx-auto p-8 md:py-12  "
+          className=" mx-auto py-8 md:py-12  "
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -303,7 +303,7 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
                 Nosso Amor em Números
               </h1> */}
               <motion.p
-                className="text-gray-800 text-xl md:text-2xl font-bold mx-20"
+                className="text-gray-800 text-xl md:text-2xl font-bold md:mx-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
@@ -337,7 +337,7 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
 
           {/* Contador Principal */}
           <motion.div
-            className="flex flex-wrap justify-center items-center gap-3 md:gap-6 mb-16"
+            className="flex flex-wrap justify-center items-center  gap-3 md:gap-6 mb-16"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0 }}
@@ -368,18 +368,18 @@ export default function LoveCounter({ startDate = "2022-10-08" }: LoveCounterPro
           </motion.div>
 
            <motion.div
-            className="flex flex-wrap justify-center items-center gap-3 md:gap-6 mb-16"
+            className="flex flex-wrap justify-center items-center  gap-3 md:gap-6 mb-16"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0 }}
           >
             <motion.p
-              className="text-gray-800 text-xl md:text-xl font-semibold mx-20"
+              className="text-gray-800 text-lg md:text-xl text-center font-semibold md:mx-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Estatisticas do nosso relacionamento
+              Estatisticas aproximadas do nosso relacionamento
             </motion.p>
 
           </motion.div>

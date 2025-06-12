@@ -5,7 +5,23 @@ import type React from "react"
 import { useState, useEffect, useRef, useMemo } from "react"
 import { motion } from "framer-motion"
 import './polaroid-slideshow.css';
-import foto01 from './../../../assets/foto01.jpg'
+// import foto01 from './../../../assets/foto01.jpg'
+import foto02 from './../../../assets/foto02.jpg'
+import foto03 from './../../../assets/foto03.jpg'
+import foto04 from './../../../assets/foto04.jpg'
+import foto06 from './../../../assets/foto06.jpg'
+import foto7 from './../../../assets/foto7.jpg'
+import foto8 from './../../../assets/foto8.jpg'
+import foto9 from './../../../assets/foto9.jpg'
+import foto10 from './../../../assets/foto10.jpg'
+import foto11 from './../../../assets/foto11.jpg'
+import foto12 from './../../../assets/foto12.jpg'
+import foto13 from './../../../assets/foto13.jpg'
+import foto14 from './../../../assets/foto14.jpg'
+import foto15 from './../../../assets/foto15.jpg'
+import foto16 from './../../../assets/foto16.jpg'
+import foto17 from './../../../assets/foto17.jpg'
+import foto18 from './../../../assets/foto18.jpg'
 import { Action } from "../../../App"
 
 interface PolaroidSlideshowProps {
@@ -27,36 +43,92 @@ const PolaroidSlideshow: React.FC<PolaroidSlideshowProps> = ({
 }) => {
   // Vetor de fotos (substitua com suas próprias fotos)
   const photos: Photo[] = useMemo(() => [
-    {
-      src: foto01,
-      caption: "Nosso primeiro encontro",
-      rotation: getRandomRotation(),
-    },
-    {
-      src: foto01,
-      caption: "Aquele pôr do sol inesquecível",
-      rotation: getRandomRotation(),
-    },
-    // {
-    //   src: foto02,
-    //   caption: "Nosso jantar à luz de velas",
-    //   rotation: getRandomRotation(),
-    // },
-    // {
-    //   src: foto02,
-    //   caption: "Caminhando de mãos dadas",
-    //   rotation: getRandomRotation(),
-    // },
     // {
     //   src: foto01,
-    //   caption: "Nosso primeiro beijo",
+    //   caption: "",
     //   rotation: getRandomRotation(),
     // },
-    // {
-    //   src: foto02,
-    //   caption: "Dançando sob as estrelas",
-    //   rotation: getRandomRotation(),
-    // },
+    {
+      src: foto02,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto03,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto04,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto06,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto7,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto8,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto9,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto10,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto11,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto12,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto13,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+        {
+      src: foto14,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+            {
+      src: foto15,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+            {
+      src: foto16,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+            {
+      src: foto17,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+    {
+      src: foto18,
+      caption: "",
+      rotation: getRandomRotation(),
+    },
+    
   ], [])
 
   const [focusedIndex, setFocusedIndex] = useState(0)

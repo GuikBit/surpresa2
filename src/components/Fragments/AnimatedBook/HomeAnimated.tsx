@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import AnimatedBook, { PageData } from './AnimatedBook';
 import './AnimatedBook.css';
+import foto1 from './../../../assets/foto04.jpg'
+import foto5 from './../../../assets/foto5.jpg'
 
-// import foto from '../../../assets/foto03.jpg'
-import foto1 from '../../../assets/foto04.jpg'
 
 const HomeAnimated: FC<{ setNext:(item: boolean)=>void, onComplete: ()=> void}> = ({ setNext, onComplete }) => {
   // Tipando o array de páginas
@@ -11,7 +11,7 @@ const HomeAnimated: FC<{ setNext:(item: boolean)=>void, onComplete: ()=> void}> 
     {
       title: "Onde Tudo Começou",
       content: ["Muito antes do nosso primeiro 'oi', ou até mesmo do nosso primeiro olhar, o destino já entrelaçava as nossas vidas de um jeito silencioso e mágico.", "Naquele Natal, em meio ao brilho das luzes e à agitação do shopping, éramos apenas duas crianças em mundos separados, unidas por um desejo em comum: um retrato com o Papai Noel. Mal sabíamos nós que, naquele instante congelado no tempo, a vida nos apresentava pela primeira vez. Hoje, olhando para essa foto, eu tenho a certeza de que o universo não trabalha com acasos. ", "Aquele encontro inocente não foi sorte; foi a primeira promessa do nosso amor, a primeira página da história que um dia seria a nossa."],
-      image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGlicmFyeXxlbnwwfHwwfHx8MA&auto=format&fit=crop&w=500&q=60"
+      image: foto5
     },
     {
       title: "A Descoberta um do Outro",
@@ -92,7 +92,7 @@ const HomeAnimated: FC<{ setNext:(item: boolean)=>void, onComplete: ()=> void}> 
         pages={bookPages}
         setNext={setNext}
         onComplete={onComplete}
-        coverTitle="A Saga do Código"
+        coverTitle=""
         // Você pode personalizar as imagens da capa e da textura do papel aqui também:
          //coverImage="URL_DA_SUA_IMAGEM_DE_CAPA"
          //paperTextureImage="URL_DA_SUA_TEXTURA_DE_PAPEL"

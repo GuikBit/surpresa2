@@ -290,7 +290,12 @@ const QuizSection = ({ onComplete, onBack }) => {
                       disabled={selectedAnswer !== null}
                     >
                       <span className="flex items-start">
-                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-700 mr-3 shrink-0">
+                        <span className={`flex items-center justify-center w-6 h-6 rounded-full   mr-3 shrink-0 ${selectedAnswer === index
+                          ? index + 1 === questions[currentQuestion].correctAnswer
+                            ? "text-green-700 bg-green-200" 
+                          :"text-red-700 bg-red-100"
+                          :"text-red-700 bg-red-100"
+                        }`}>
                           {String.fromCharCode(65 + index)}
                         </span>
                         {option}
